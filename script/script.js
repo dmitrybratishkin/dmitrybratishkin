@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const contentButton = target.textContent.trim();
             
             if (contentButton === '⬅') {
-                searchInput.value = searchInput.value.slice(0, length-1);
+                searchInput.value = searchInput.value.slice(0, length -1);
             } else if (!contentButton){
                 searchInput.value += ' ';
             } else if(contentButton === 'en' || 
@@ -324,6 +324,7 @@ const youtuber = () =>{
                 part: 'snippet',
                 playlistId: 'LLxOEMbl-dcs_MUEEFXdBzIg',
                 maxResults: 6,
+                nextPageToken: "CAYQAA"
             })
         });
 
@@ -354,6 +355,9 @@ const youtuber = () =>{
                 maxResults: 6,
                 q: valueInput,
             })
+
+            searchForm.elements[0].value = '';
+
         });
 
     }
